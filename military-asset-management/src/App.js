@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import PurchasesPage from './components/PurchasesPage';
@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>
-        <Route path="/" exact component={Dashboard} />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
         <Route path="/purchases" component={PurchasesPage} />
         <Route path="/transfers" component={TransferPage} />
         <Route path="/assignments" component={AssignmentsPage} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
