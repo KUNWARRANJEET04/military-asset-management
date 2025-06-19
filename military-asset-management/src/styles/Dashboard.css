@@ -1,0 +1,36 @@
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-value {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-top: 10px;
+}

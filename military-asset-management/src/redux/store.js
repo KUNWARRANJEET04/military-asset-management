@@ -1,10 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import assetsReducer from './slices/assetsSlice'; // example reducer
+import { createStore } from 'redux';
+import rootReducer from './reducers';
 
-const store = configureStore({
-  reducer: {
-    assets: assetsReducer,
-  },
-});
+const store = createStore(rootReducer);
 
 export default store;
