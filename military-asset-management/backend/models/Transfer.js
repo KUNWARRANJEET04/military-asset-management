@@ -1,17 +1,9 @@
-// backend/models/Asset.js
+// backend/models/Transfer.js
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const Asset = sequelize.define('Asset', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    base: {
+  const Transfer = sequelize.define('Transfer', {
+    assetName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,7 +11,19 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    fromBase: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    toBase: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+    },
   });
 
-  return Asset;
+  return Transfer;
 };

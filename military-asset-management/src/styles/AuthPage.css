@@ -1,0 +1,77 @@
+.auth-container {
+  height: 100vh;
+  background-image: url('../assets/1112.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.auth-box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00ffcc;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background: #00ffcc;
+  color: #000;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box input,
+.auth-box select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.auth-box button[type="submit"] {
+  background-color: #00ffcc;
+  border: none;
+  padding: 12px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.auth-box button[type="submit"]:hover {
+  background-color: #00e6b8;
+}

@@ -1,25 +1,30 @@
-// backend/models/Asset.js
+// backend/models/Assignment.js
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const Asset = sequelize.define('Asset', {
-    name: {
+  const Assignment = sequelize.define('Assignment', {
+    assetName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type: {
+    assignedTo: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    base: {
+    unit: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 1,
+    },
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
     },
   });
 
-  return Asset;
+  return Assignment;
 };
